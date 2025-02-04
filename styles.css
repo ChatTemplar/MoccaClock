@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #3e2723, #8d6e63);
+    font-family: 'Courier New', monospace;
+}
+
+.clock-container {
+    text-align: center;
+    font-size: 5rem;
+    perspective: 1000px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.time-unit {
+    display: inline-block;
+    margin: 0 0.3em;
+    vertical-align: top;
+}
+
+.digit-container {
+    display: inline-block;
+    position: relative;
+    margin: 0 1px;
+    transform-style: preserve-3d;
+    transform: rotateZ(var(--tilt));
+}
+
+.digit {
+    display: inline-block;
+    position: relative;
+    padding: 0 0.1em;
+    background: linear-gradient(to bottom, #d7ccc8 0%, #bcaaa4 100%);
+    border-radius: 5px;
+    color: #4e342e;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: rotateZ(var(--tilt));
+    margin: 0 -0.05em;
+}
+
+.flip-animation {
+    animation: flip 0.6s ease-out;
+}
+
+@keyframes flip {
+    0% { transform: rotateX(0deg) rotateZ(var(--tilt)); }
+    50% { transform: rotateX(-90deg) rotateZ(var(--tilt)); }
+    100% { transform: rotateX(0deg) rotateZ(var(--tilt)); }
+}
+
+.label {
+    font-size: 1rem;
+    display: block;
+    color: #d7ccc8;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Tilt angles */
+.time-unit:nth-child(1) .digit-container:nth-child(1) { --tilt: 1.2deg; }
+.time-unit:nth-child(1) .digit-container:nth-child(2) { --tilt: -0.8deg; }
+.time-unit:nth-child(2) .digit-container:nth-child(1) { --tilt: -1.1deg; }
+.time-unit:nth-child(2) .digit-container:nth-child(2) { --tilt: 0.9deg; }
+.time-unit:nth-child(3) .digit-container:nth-child(1) { --tilt: 0.7deg; }
+.time-unit:nth-child(3) .digit-container:nth-child(2) { --tilt: -1.3deg; }
+.time-unit:nth-child(4) .digit-container:nth-child(1) { --tilt: -0.6deg; }
+.time-unit:nth-child(4) .digit-container:nth-child(2) { --tilt: 1.0deg; }
+.time-unit:nth-child(5) .digit-container:nth-child(1) { --tilt: 1.4deg; }
+.time-unit:nth-child(5) .digit-container:nth-child(2) { --tilt: -0.5deg; }
+.time-unit:nth-child(5) .digit-container:nth-child(3) { --tilt: 0.9deg; }
+.time-unit:nth-child(5) .digit-container:nth-child(4) { --tilt: -1.2deg; }
