@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocha Tilted Flip Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="clock-container">
+        <!-- Seconds -->
+        <div class="time-unit">
+            <span class="label">Seconds</span>
+            <div class="digit-container">
+                <span class="digit" id="seconds-tens">0</span>
+            </div>
+            <div class="digit-container">
+                <span class="digit" id="seconds-ones">0</span>
+            </div>
+        </div>
 
+        <!-- Hours -->
+        <div class="time-unit">
+            <span class="label">Hours</span>
+            <div class="digit-container">
+                <span class="digit" id="hours-tens">0</span>
+            </div>
+            <div class="digit-container">
+                <span class="digit" id="hours-ones">0</span>
+            </div>
+        </div>
+
+        <!-- Day -->
+        <div class="time-unit">
+            <span class="label">Day</span>
+            <div class="digit-container">
+                <span class="digit" id="day-tens">0</span>
+            </div>
+            <div class="digit-container">
+                <span class="digit" id="day-ones">0</span>
+            </div>
+        </div>
+
+        <!-- Month -->
+        <div class="time-unit">
+            <span class="label">Month</span>
+            <div class="digit-container">
+                <span class="digit" id="month-tens">0</span>
+            </div>
+            <div class="digit-container">
+                <span class="digit" id="month-ones">0</span>
+            </div>
+        </div>
+
+        <!-- Year -->
+        <div class="time-unit">
+            <span class="label">Year</span>
+            <div class="digit-container">
+                <span class="digit" id="year-thousands">2</span>
+            </div>
+            <div class="digit-container">
+                <span class="digit" id="year-hundreds">0</span>
+            </div>
+            <div class="digit-container">
+                <span class="digit" id="year-tens">2</span>
+            </div>
+            <div class="digit-container">
+                <span class="digit" id="year-ones">3</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
